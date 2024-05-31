@@ -21,11 +21,11 @@ public class Users {
     @Column(name = "type", length = 100)
     private String type;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "authorizedResource")
     private Resource authorizedResource;
 
     @Column(name = "active")
-    private Byte active;
+    private Integer active;
 
 }
